@@ -3,4 +3,4 @@ sources:
   - name: staging
     schema: public
     tables:
-      - name: raw_rates
+      - name: rates_raw
