@@ -5,7 +5,7 @@ with extracted_rates as (
         ((extracted_data -> 'rates' -> 'GBP')::VARCHAR)::FLOAT as gbp,
         ((extracted_data -> 'rates' -> 'USD')::VARCHAR)::FLOAT as usd,
         ((extracted_data -> 'rates' -> 'INR')::VARCHAR)::FLOAT as inr
-    from {{source('staging'), 'rates_raw'}}
+    from {{source('staging', 'rates_raw')}}
 ) 
 select * 
 from extracted_rates
