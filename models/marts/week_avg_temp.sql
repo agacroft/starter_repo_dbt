@@ -10,7 +10,7 @@ weekday_avg  AS (
             AVG(avgtemp_c) AS avg_temp
     FROM weekday_name
     GROUP BY date_part('week', date) AS day_num
-    ORDER BY day_num
+
 )
 SELECT * 
 FROM weekday_avg
