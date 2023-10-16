@@ -4,12 +4,12 @@ WITH weekday_name AS (
 ),
 weekday_avg  AS (
     SELECT  --day_num,
-            date_part('week', date) AS day_num as week_number,
+            date_part('week', date) as week_number,
             AVG(maxtemp_c) AS avg_max_temp, 
             AVG(mintemp_c) AS avg_min_temp, 
             AVG(avgtemp_c) AS avg_temp
     FROM weekday_name
-    GROUP BY date_part('week', date) AS day_num
+    GROUP BY date_part('week', date)
 
 )
 SELECT * 
